@@ -1,0 +1,35 @@
+#include <iostream>
+using namespace std;
+int main() {
+    string x;
+    int number1, number2, answer, total = 0;
+    cout << "輸入第一個數字:";
+    cin >> number1;
+    cout << "輸入符號:";
+    cin >> x;
+    cout << "輸入第二個數字:";
+    cin >> number2;
+    if (x == "*") {
+        answer = number1 * number2;
+    }
+    else if (x == "+") {
+            answer = number1 + number2;
+    }
+    else if (x == "-") {
+            answer = number1 - number2;
+    }
+    else if (x == "/") {
+            answer = number1 / number2;
+    }
+    cout << answer;
+    for (int y = 0; y < 10; y++) {
+        total = total + answer % 10;
+        answer = answer / 10;
+    }
+    if (total % 3 == 0) {
+       cout << "是3的倍數";
+    }
+    else {
+         cout << "不是3的倍數";
+    }
+}
