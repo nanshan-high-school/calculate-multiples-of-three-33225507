@@ -5,7 +5,7 @@ int main() {
     int number1 = 0, number2 = 0, answer, x, total = 0, k1 = 0;
     cout << "輸入算式:";
     cin >> y;
-    for (int i = 0; y[i] > 47; i++) {
+    for (int i = 0; y[i] > '0'; i++) {
         number1 = number1 * 10 + y[i] - 48;
         k1 = k1 + 1;
     }
